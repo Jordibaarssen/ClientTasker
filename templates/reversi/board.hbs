@@ -1,0 +1,11 @@
+<table class="bord" id="ReversiBord">
+    {{#each board}}
+        <tr>
+            {{#each this}}
+                <td class="board-row-y-{{@../index}} board-row-x-{{@index}} vakje vakje-chalk">
+                    {{>fiche kleur = this}}
+                </td>
+            {{/each}}
+        </tr>
+    {{/each}}
+</table>

@@ -1,0 +1,28 @@
+$afmeting: 38px;
+$kleur: red;
+$rondje: 50%;
+$margin: 8px;
+
+.fiche-2 {
+  height: $afmeting;
+  width: $afmeting;
+  background-color: $kleur;
+  border-radius: $rondje;
+  margin-left: $margin;
+  animation: spin 1.5s linear;
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform:scale(0.25);
+    -ms-transform: scale(0.25);
+    transform: scale(0.25)}
+  50% {
+    -webkit-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    transform: scale(0.5);}
+  100% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);}
+}

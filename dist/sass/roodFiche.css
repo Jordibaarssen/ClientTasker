@@ -1,0 +1,26 @@
+.fiche-2 {
+  height: 38px;
+  width: 38px;
+  background-color: red;
+  border-radius: 50%;
+  margin-left: 8px;
+  animation: spin 1.5s linear;
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: scale(0.25);
+    -ms-transform: scale(0.25);
+    transform: scale(0.25);
+  }
+  50% {
+    -webkit-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}

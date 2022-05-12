@@ -1,0 +1,41 @@
+.spel-details {
+  text-align: left;
+}
+.spel-details b {
+  font: 400 19vh "Comic Sans MS";
+  font-size: 20px;
+  color: #ffffff;
+  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff4444, 0 0 0.5em #ff4444, 0 0 0.1em #ff4444, 0 10px 3px #000;
+}
+.spel-details b span {
+  animation: blink linear infinite 10s;
+}
+
+.fun-fact {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.winnaar {
+  text-align: center;
+  position: absolute;
+  top: 350px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  user-select: none;
+  display:none;
+}
+
+.winnaar b {
+  font: 400 19vh "Comic Sans MS";
+  font-size: 60px;
+  color: #ffffff;
+  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff4444, 0 0 0.5em #ff4444, 0 0 0.1em #ff4444, 0 10px 3px #000;
+}
+.winnaar b span {
+  animation: blink linear infinite 2.3s;
+}
+.winnaar b span:nth-of-type(2) {
+  animation: blink linear infinite 3.1s;
+}

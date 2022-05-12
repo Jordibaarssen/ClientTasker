@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript getting started</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+
+
+    <script type="text/javascript"  src="js/feedbackWidget.js"></script>
+    <script type="text/javascript" src="js/game.js"></script>
+    <script type="text/javascript" src="js/game.reversi.js"></script>
+    <script type="text/javascript" src="js/game.model.js"></script>
+    <script type="text/javascript" src="js/game.data.js"></script>
+    <script type="text/javascript" src="js/game.api.js"></script>
+    <script type="text/javascript" src="dist/js/vendor.js"></script>
+    <script type="text/javascript" src="dist/js/templates.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/feedbackWidget.css">
+    <link rel="stylesheet" type="text/css" href="css/fadeInOut.css">
+
+</head>
+<body>
+
+<script>
+    function toggleFeedback(elementId) {
+        var x = document.getElementById(elementId);
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+
+    $(function() {
+        console.log( "ready!" );
+    });
+
+</script>
+
+<button id="ok-knop">OK</button>
+
+<section id="feedback-success" class="alert alert-success widget" role="alert">
+    <header>
+        <button class="feedbackX" onclick="hide()">x</button>
+    </header>
+
+    <figure>
+        <img src="https://i2.wp.com/www.discoverynetworking.nl/wp-content/uploads/2014/12/checkmark-round.png?ssl=1" class="checkmark lg">
+        <p class="feedbacktext"> Mike wil deelnemen aan je spel. Geef akkoort</p>
+    </figure>
+
+
+    <footer class="buttons">
+        <button class="feedbackbuttonAkkoort resA" Id="BtnA" onclick="btnAeffect()">Akkoort</button>
+        <button class="feedbackbuttonWeiger ">Weigeren</button>
+    </footer>
+</section>
+
+<section id="feedback-danger" class="alert alert-danger widget" role="alert" style="display:none">
+    <header>
+        <button class="feedbackX">x</button>
+    </header>
+
+    <figure >
+        <img src="https://i2.wp.com/www.discoverynetworking.nl/wp-content/uploads/2014/12/checkmark-round.png?ssl=1" class="checkmark">
+        <p class="feedbacktext"> Er is iets fout gegaan</p>
+    </figure>
+
+
+    <footer>
+        <button class="feedbackbuttonAkkoort">Akkoort</button>
+        <button class="feedbackbuttonWeiger">Weigeren</button>
+    </footer>
+</section>
+
+<script>
+
+    function show(){
+        let x = document.getElementById("feedback-success");
+        x.classList.remove("fade-out");
+        x.classList.add("fade-in");
+    }
+
+    function hide(){
+        let x = document.getElementById("feedback-success");
+        x.classList.remove("fade-in");
+        x.classList.add("fade-out");
+        //x.classList.add("spinOut")
+    }
+
+    function btnAeffect(){
+        let x = document.getElementById("BtnA");
+        x.classList.add("bibber");
+    }
+
+    $("#ok-knop").on("click", function(){
+        // var feedback = new FeedbackWidget('feedback-success');
+        // feedback.show('heyhoi', 'success');
+        show()
+    });
+
+</script>
+
+
+
+
+</body>
+</html>

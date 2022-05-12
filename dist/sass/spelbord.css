@@ -1,0 +1,27 @@
+.bord {
+  margin: auto auto 4rem;
+  filter: url("#filter-chalk");
+}
+
+.vakje {
+  height: 62.5px;
+  width: 62.5px;
+  border: 3px solid #fff;
+}
+
+.svg-filter {
+  position: absolute;
+  visibility: hidden;
+  width: 1px;
+  height: 1px;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: #112 url(//images.weserv.nl/?url=i.imgur.com/6QJjYMe.jpg) center;
+  background-size: cover;
+  margin: 0;
+}
